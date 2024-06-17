@@ -7,5 +7,6 @@
 	</classpathentry>
 	<classpathentry kind="src" path="calculadora"/>
 	<classpathentry kind="src" path="agendaDeContactos"/>
+	<classpathentry kind="src" path="conversorDeMoneda"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
