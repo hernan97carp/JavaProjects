@@ -62,13 +62,14 @@ public class CalculatorTest {
 		num1 = numbers[0];
 		num2 = numbers[1];
 		
-		if (num2 != 0) {
+		if (num2 == 0) {
+			// Handle division by zero case
+			 throw new IllegalArgumentException("Skipping test for division by zero: num2 is " + num2);
+
+		} else {
 			expected = num1 / num2;
 			result = calculator.divide(num1, num2);
 			assertOperationResult(result, expected, num1, num2, "/");
-		} else {
-			// Handle division by zero case
-			 throw new IllegalArgumentException("Skipping test for division by zero: num2 is " + num2);
 		}
 	}
 
