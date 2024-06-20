@@ -1,4 +1,3 @@
-
 package agenda;
 
 import java.util.ArrayList;
@@ -16,7 +15,7 @@ public class ContactBook {
 
     public Contact findContact(String name) {
         for (Contact contact : contacts) {
-            if (contact.name.equalsIgnoreCase(name)) {
+            if (contact.getName().equalsIgnoreCase(name)) {
                 return contact;
             }
         }

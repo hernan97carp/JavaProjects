@@ -1,6 +1,5 @@
 
 package agenda;
-
 import java.util.Scanner;
 
 public class Main {
@@ -16,7 +15,7 @@ public class Main {
             System.out.println("4. Exit");
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
-            scanner.nextLine();  // Consume newline
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
