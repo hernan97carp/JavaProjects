@@ -9,10 +9,10 @@ public class CurrencyConverter {
     private static final double USD_TO_GBP = 0.75;
     private static final double USD_TO_INR = 74.85;
 
-    // ANSI escape codes for text color
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_RED = "\u001B[31m";
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Map<Integer, String> currencyOptions = new LinkedHashMap<>();
@@ -57,14 +57,14 @@ public class CurrencyConverter {
                     scanner.close();
                     return; // Exit the program
                 } else {
-                    System.out.println(ANSI_RED +"Invalid choice!" + ANSI_RESET);
+                    System.out.println(ANSI_RED + "Invalid choice!" + ANSI_RESET);
                 }
 
             } while (choice != 5); // Continue the inner loop unless user wants to enter a new amount
         }
     }
 
-    private static double convertCurrency(double usd, int choice) {
+    public static double convertCurrency(double usd, int choice) {
         switch (choice) {
             case 1:
                 return usd * USD_TO_EUR;
@@ -75,6 +75,18 @@ public class CurrencyConverter {
             default:
                 return -1;
         }
+    }
+
+    public static double getUSDToEUR() {
+        return USD_TO_EUR;
+    }
+
+    public static double getUSDToGBP() {
+        return USD_TO_GBP;
+    }
+
+    public static double getUSDToINR() {
+        return USD_TO_INR;
     }
 
     private static double getValidDouble(Scanner scanner) {
@@ -96,7 +108,7 @@ public class CurrencyConverter {
             try {
                 return Integer.parseInt(scanner.nextLine());
             } catch (NumberFormatException e) {
-                System.out.print(ANSI_RED + "Invalid input. Please enter a valid choice: "  + ANSI_RESET);
+                System.out.print(ANSI_RED + "Invalid input. Please enter a valid choice: " + ANSI_RESET);
             }
         }
     }
